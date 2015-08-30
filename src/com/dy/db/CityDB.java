@@ -11,7 +11,9 @@ import android.text.TextUtils;
 import com.dy.bean.City;
 
 /**
- * 数据库类,可以把常用的数据库操作封装起来
+ * 数据库类,
+ * 封装了dB连接和dB的其他操作 
+ *
  * 获得所有的的City信息
  * 获得单个City信息
  * @author DX2903
@@ -26,7 +28,7 @@ public class CityDB {
 	public CityDB(Context context, String path) {
 //		abstract SQLiteDatabase	openOrCreateDatabase(String name, int mode, SQLiteDatabase.CursorFactory factory)
 //		Open a new private SQLiteDatabase associated with this Context's application package.
-		db = context.openOrCreateDatabase(path, Context.MODE_PRIVATE, null);
+		this.db = context.openOrCreateDatabase(path, Context.MODE_PRIVATE, null);
 	};
 
 	/**
